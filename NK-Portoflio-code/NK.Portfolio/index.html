@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="images/icon.ico">
+    <link rel="icon" href="icon.ico">
     <script src='main.js'></script>
 
     <style>
@@ -20,9 +20,18 @@
         }
 
 
-        :root{
+          *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Poppins', sans-serif;  
+        }
+
+
+        :root
+        {
             --black:#333;
-            --black2:#333 ;
+            --black2:#444 ;
             --white:#FFF ;
             --white2:#FFF ;
             --bleu:#34485e;
@@ -31,14 +40,15 @@
         }
 
         
-       :root  .dark{
+        .dark
+        {
             --black:#FFF;
             --black2:#FFF ;
             --white:#333 ;
             --white2:#444 ;
-            --bleu:#333;
+            --bleu:##FFF;
             --gray:#FFF;
-            --bleu2:#0000FF;
+            --bleu2:#fff;
         }
 
         body{
@@ -76,6 +86,9 @@
             transition: width 0.5s;
         }
 
+        .dark .navigation{
+        border-right:1px solid rgba(0,0,0,0.5);
+        }
         .navigation.active{
             width: 0px;
         }
@@ -142,6 +155,10 @@
             align-items: center;
             z-index: 10000;
             transition: width 0.5s, left 0.5s;
+        }
+
+        .dark .main.togbar{
+        border-bottom:1px solid rgba(0,0,0,0.5);
         }
 
         .main .togbar.active{
@@ -213,9 +230,9 @@
         margin-top: 10px;
         text-decoration: none;
         transition: scale 0.2 ease;
+        border-radius: 5px;
       }
       .btn:hover{
-     background: var(--bleu);
      scale: 1.09;
 
       }
@@ -585,7 +602,6 @@ border-radius: 5px;
 .contact .contactform input[type="submit"]:hover
 {
 scale: 0.9;
-background: var(--bleu);
 color: var(--white2);
 }
 
@@ -614,6 +630,12 @@ color: var(--white2);
     font-family: fontAwesome;
 }
 
+.dark .themeSwitch::before
+{
+content:'\f185';
+font-family: fontAwesome;
+}
+
 .themeSwitch::after{
     content: 'Switch To Dark Mode';
     position: absolute;
@@ -626,9 +648,20 @@ color: var(--white2);
     pointer-events: none;
 
 }
+.dark p {
+color:var(--black);
+}
+
+.dark h4{
+color:var(--black);
+}
+.dark .themeSwitch::after
+{
+content: 'Switch To Light Mode';
+}
     </style>
 </head>
-<body  ç>
+<body >
     <div class="container">
         <div class="navigation">
             <ul>
@@ -653,11 +686,11 @@ color: var(--white2);
                 <div class="content">
                    
                     <div class="imgbx">
-                        <img class="logo"  src="..\NK.Portfolio\images\newLOGOwhite-removebg-preview.png">
+                        <img class="logo"  src="images\newLOGOwhite-removebg-preview.png">
                     </div>
                     <h3>Nabila Kouraik </h3>
                     <p>Full-Stack developer & Data Analyst.</p>
-                    <a href="#" class="btn">Download My CV </a>
+                    <a href="cv.pdf" download class="btn">Download My CV </a>
                     <ul class="socialMedia">
                         <li><a href="https://web.facebook.com/nabila.kouraik0000"><i class="fa fa-facebook-square" aria-hidden="true"></i> </a></li>
                         <li><a href="https://www.linkedin.com/in/nabila-kouraik-6573691aa/"><i class="fa fa-linkedin-square" aria-hidden="true"></i> </a></li>
@@ -682,7 +715,7 @@ color: var(--white2);
                         </p>
                     </div>
                     <div class="imgBx">
-                        <img src="..\NK.Portfolio\images\pic.png" alt="">
+                        <img src="images\pic.png" alt="">
                     </div>
                 </div>
             </section>
@@ -737,7 +770,7 @@ color: var(--white2);
             <!--skills -->
             <section id="skills">
                 <div class="title">
-                    <h2>Skills </h2>
+                    <h2> Skills </h2>
                 </div>
 
 
@@ -881,7 +914,7 @@ color: var(--white2);
                 <div class="content">
                     <div class="workbx">
                         <div class="imgBX">
-                            <img src="..\NK.Portfolio\images\prj1.jpg" >
+                            <img src="images\prj1.jpg" >
                         </div>
                         <div class="textbx"><h3>Project 01</h3></div>
                     </div>
@@ -890,7 +923,7 @@ color: var(--white2);
               
                     <div class="workbx">
                         <div class="imgBX">
-                            <img src="..\NK.Portfolio\images\prj2.jpg" >
+                            <img src="images\prj2.jpg" >
                         </div>
                         <div class="textbx"><h3>Project 02</h3></div>
                     </div>
@@ -900,7 +933,7 @@ color: var(--white2);
                
                     <div class="workbx">
                         <div class="imgBX">
-                            <img src="..\NK.Portfolio\images\prj4.jpg" >
+                            <img src="images\prj4.jpg" >
                         </div>
                         <div class="textbx"><h3>Project 03</h3></div>
                     </div>
@@ -910,7 +943,7 @@ color: var(--white2);
                 
                     <div class="workbx">
                         <div class="imgBX">
-                            <img src="..\NK.Portfolio\images\prj8.jpg" >
+                            <img src="images\prj8.jpg" >
                         </div>
                         <div class="textbx">
                             <h3>Project 04</h3>
@@ -921,7 +954,7 @@ color: var(--white2);
                
                     <div class="workbx">
                         <div class="imgBX">
-                            <img src="..\NK.Portfolio\images\prj3.jpg" >
+                            <img src="images\prj3.jpg" >
                         </div>
                         <div class="textbx"><h3>Project 05</h3></div>
                     </div>
@@ -931,7 +964,7 @@ color: var(--white2);
                
                     <div class="workbx">
                         <div class="imgBX">
-                            <img src="..\NK.Portfolio\images\prj5.jpg" >
+                            <img src="images\prj5.jpg" >
                         </div>
                         <div class="textbx"><h3>Project 06</h3></div>
                     </div>
@@ -983,13 +1016,14 @@ color: var(--white2);
         let toggle=document.querySelector('.toggle');
         let togbar=document.querySelector('.togbar');
         let navigation=document.querySelector('.navigation');
-        let themeSwitch = document.querySelector('themeSwitch');
-        let body = document.querySelector('body');
+
+        const togmode = document.querySelector('.themeSwitch');
+        const body = document.querySelector("body");
 
         
         let main=document.querySelector('.main');
       
-
+ 
 
         toggle.onclick = function() {
             toggle.classList.toggle('active');
@@ -998,9 +1032,9 @@ color: var(--white2);
             main.classList.toggle('active');
 
         }
-
-
-        themeSwitch.onclick = function(){
+        togmode.addEventListener("click",() => togmode.classList.togmode("dark"));
+        
+        togmode.onclick = function(){
             body.classList.toggle('dark');
         }
 
